@@ -56,6 +56,77 @@
     </div>
 
 
+        <div id="mainPage" class="hidden">
+        <!-- navigation bar  -->
+        <nav class="bg-white shadow flex justify-between items-center px-8 py-4 sticky top-0 z-50">
+            <div class="flex items-center gap-2">
+                <img src="assets/github-logo.png" class="w-8">
+                <h2 class="font-semibold text-lg">GitHub Issues Tracker</h2>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <div class="relative">
+                    <input id="searchInput" type="text" oninput="searchIssue()" placeholder="Search issues..."
+                        class="border px-4 py-2 rounded w-64 focus:outline-blue-500">
+                </div>
+                <button class="bg-blue-600 text-white px-5 py-2 rounded shadow hover:bg-blue-700"><i class="fa-solid fa-plus"></i> New Issue</button>
+            </div>
+        </nav>
+
+        <!-- toggle btn -->
+
+        <main class="max-w-6xl mx-auto mt-6 px-4">
+            <div class="flex gap-4 mb-6">
+                <button id="allTab" onclick="loadIssues('all')"
+                    class="tab px-6 py-2 bg-blue-600 text-white rounded-lg font-medium transition shadow-sm">
+                    All
+                </button>
+                <button id="openTab" onclick="loadIssues('open')"
+                    class="tab px-6 py-2 bg-white text-gray-700 border border-blue-200 rounded-lg font-medium transition shadow-sm">
+                    Open
+                </button>
+                <button id="closedTab" onclick="loadIssues('closed')"
+                    class="tab px-6 py-2 bg-white text-gray-700 border border-blue-200 rounded-lg font-medium transition shadow-sm">
+                    Closed
+                </button>
+            </div>
+
+            <!-- deshboard section -->
+
+            <div class="bg-white border rounded-xl p-6 mb-8 flex flex-col md:flex-row justify-between items-center shadow-sm">
+                <div class="flex items-center gap-5">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center text-blue-600">
+                        <img src="assets/Aperture.png" alt="">
+                        <!-- <i class="fa-solid fa-circle-dot text-xl"></i> -->
+                    </div>
+                    <div>
+                        <h2 id="issueCountDisplay" class="font-bold text-2xl">0 Issues</h2>
+                        <p class="text-sm text-gray-400">Track and manage your project issues</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <div class="flex items-center gap-2 text-sm font-semibold">
+                        <span class="w-3 h-3 bg-green-500 rounded-full"></span> Open
+                    </div>
+                    <div class="flex items-center gap-2 text-sm font-semibold">
+                        <span class="w-3 h-3 bg-purple-500 rounded-full"></span> Closed
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="loader" class="hidden text-center py-20">
+                <div class="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-blue-600 mb-2"></div>
+                <div class="text-lg text-blue-600 font-semibold">Loading Issues...</div>
+            </div>
+
+            <div id="issuesContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+            </div>
+        </main>
+    </div>
+
+
     <!-- javascrip -->
      <script src="js/script.js"></script>
 </body>
