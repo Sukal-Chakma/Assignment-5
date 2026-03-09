@@ -21,9 +21,41 @@
         }
     </style>
 </head>
-<body>
-    
-<h1>hello</h1>
+<body class="bg-gray-100">
+   
+        <!-- Login Page -->
+    <div id="loginPage" class="flex items-center justify-center h-screen">
+        <div class="bg-white p-10 rounded-lg w-96 shadow">
+            <div class="flex flex-col items-center mb-6">
+                <img src="assets/github-logo.png" class="w-16 mb-2" />
+                <h1 class="text-2xl font-bold">GitHub Issues Tracker</h1>
+                <p class="text-gray-500 text-sm">Sign in to manage your issues</p>
+            </div>
+
+            <div class="space-y-4">
+                <div>
+                     <label class="label font-bold">User Name</label>
+                    <input id="username" type="text" placeholder="Enter Username"
+                        class="w-full border p-2 rounded focus:outline-blue-500">
+                  
+                </div>
+
+                <div>
+                    <label class="label font-bold">Password</label>
+                    <input id="password" type="password" placeholder="Enter Password"
+                        class="w-full border p-2 rounded focus:outline-blue-500">
+               
+                </div>
+
+                <button onclick="login()"
+                    class="w-full bg-blue-600 text-white py-2 rounded-full hover:bg-blue-700 transition font-semibold">
+                    Sign In
+                </button>
+            </div>
+        </div>
+    </div>
+
+
     <!-- javascrip -->
      <script src="js/script.js"></script>
 </body>
