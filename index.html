@@ -126,6 +126,23 @@
         </main>
     </div>
 
+      <div id="modal" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-[100] backdrop-blur-sm">
+        <div class="bg-white p-8 rounded-xl w-full max-w-md shadow-2xl mx-4">
+            <h2 id="mTitle" class="text-xl font-bold mb-3 border-b pb-2"></h2>
+            <div class="space-y-2 text-sm">
+                <p id="mDesc" class="text-gray-600 mb-4 text-base leading-relaxed"></p>
+                <p class="flex justify-between border-b py-1"><b>Status:</b> <span id="mStatus" class="capitalize"></span></p>
+                <p class="flex justify-between border-b py-1"><b>Category:</b> <span id="mCategory" class="capitalize"></span></p>
+                <p class="flex justify-between border-b py-1"><b>Author:</b> <span id="mAuthor"></span></p>
+                <p class="flex justify-between border-b py-1"><b>Priority:</b> <span id="mPriority" class="capitalize"></span></p>
+                <p class="flex justify-between border-b py-1"><b>Created:</b> <span id="mDate"></span></p>
+            </div>
+            <button onclick="closeModal()" class="w-full mt-6 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                Close
+            </button>
+        </div>
+    </div>
+
 
     <!-- javascrip -->
      <script src="js/script.js"></script>

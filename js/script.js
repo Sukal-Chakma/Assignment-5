@@ -158,3 +158,29 @@
             }
         }
 
+        function openModal(issue)
+         {
+            const modal = document.getElementById("modal");
+            
+            modal.classList.replace("hidden", "flex");
+
+            document.getElementById("mTitle").innerText = issue.title;
+
+            document.getElementById("mDesc").innerText = issue.description;
+
+            document.getElementById("mStatus").innerText = issue.status;
+
+            document.getElementById("mCategory").innerText = issue.category;
+
+            document.getElementById("mAuthor").innerText = issue.author;
+
+            document.getElementById("mPriority").innerText = issue.priority;
+
+            document.getElementById("mDate").innerText = new Date(issue.createdAt).toLocaleString();
+        }
+
+        function closeModal() {
+            document.getElementById("modal").classList.replace("flex", "hidden");
+        }
+    
+
