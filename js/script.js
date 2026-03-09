@@ -26,8 +26,7 @@
         }
 
 
-
-          // btn toggle function
+        // btn toggle function
 
         async function loadIssues(type) {
             if
@@ -125,8 +124,25 @@
         }
 
         function setActive(type)
+         {
+            document.querySelectorAll(".tab").forEach(btn =>
+            
+            {
+                btn.classList.remove("bg-blue-600", "text-white");
+                btn.classList.add("bg-white", "text-gray-700", "border");
+            });
 
-            async function searchIssue() {
+            const activeTab = document.getElementById(`${type}Tab`);
+
+            if (activeTab) 
+            
+            {
+                activeTab.classList.remove("bg-white", "text-gray-700", "border");
+                activeTab.classList.add("bg-blue-600", "text-white");
+            }
+        }
+
+        async function searchIssue() {
             const text = document.getElementById("searchInput").value.trim();
             if (text === "") {
                 loadIssues("all");
@@ -183,4 +199,3 @@
             document.getElementById("modal").classList.replace("flex", "hidden");
         }
     
-
